@@ -1,3 +1,4 @@
+import HorizontalNav from './components/navbar/HorizontalNav'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className="bg-gray-200  dark:bg-gray-800 dark:text-gray-50">
+          <HorizontalNav />
+          <main>{children}</main>
+        </div>
+      </body>
+
     </html>
   )
 }
